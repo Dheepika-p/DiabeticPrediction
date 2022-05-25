@@ -20,14 +20,14 @@ app = Flask(__name__)
 def home():
    return  "Hello World"
 
-@app.route('/predict',methods=['POST'])
+# @app.route('/predict',methods=['POST'])
 
-def predict():
-    features=[x for x in request.form.values()]
-    final_features=[np.array(features)]
-    #prediction=mod.predict(final_features)
-    final_pred = model.predict(pd.DataFrame(columns=['bp','med_bp','urination','hunger','wgt_loss','fatigue','burn','sores','agediv_less_than_30','agediv_less_than_60','agediv_more_than_60'],data=final_features))[0]
-    return jsonify({'Diabetic:':str(final_pred)})
+# def predict():
+#     features=[x for x in request.form.values()]
+#     final_features=[np.array(features)]
+#     #prediction=mod.predict(final_features)
+#     final_pred = model.predict(pd.DataFrame(columns=['bp','med_bp','urination','hunger','wgt_loss','fatigue','burn','sores','agediv_less_than_30','agediv_less_than_60','agediv_more_than_60'],data=final_features))[0]
+#     return jsonify({'Diabetic:':str(final_pred)})
 
 
 
